@@ -1,0 +1,35 @@
+<%= form_for @company, html: { class: "form-horizontal"} do |f| %>
+  <% if @company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% @company.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, class: "control-label col-sm-3" %><br>
+    <div class="col-sm-6">
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :state, class: "control-label col-sm-3" %><br>
+    <div class="col-sm-6">
+      <%= f.text_field :state, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-12 col-sm-offset-3 col-xs-offset-3">
+      <div class="btn-toolbar">
+        <%= submit_tag("Submit", {:class => 'btn btn-primary'}) %>
+        <%= link_to "Back", :back, class: "btn btn-default" %>
+      </div>
+    </div>
+  </div>
+<% end %>

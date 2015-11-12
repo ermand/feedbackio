@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   scope module: :user do
     # get 'dashboard' => 'base#dashboard', as: :dashboard
+    resources 'companies'
   end
 end

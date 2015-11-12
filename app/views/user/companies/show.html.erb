@@ -1,0 +1,28 @@
+  <div class="row" id="contents">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading pin_image">
+          <%= link_to "List of companies", companies_path, class: "btn btn-default" %>
+        </div>
+        <div class="panel-body">
+          <h1>
+            <%= @company.name %>
+          </h1>
+          <h4>
+            <%= @company.state %>
+          </h4>
+        </div>
+        <div class="panel-footer">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="btn-group pull-right">
+                <%= edit_button(edit_company_path(@company)) %>
+                <%= delete_button(company_path(@company)) %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

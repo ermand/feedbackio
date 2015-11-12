@@ -13,5 +13,11 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+.container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin: -10px;
+}

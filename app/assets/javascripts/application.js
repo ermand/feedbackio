@@ -15,4 +15,19 @@
 //= require turbolinks
 //= require jquery
 //= require bootstrap-sprockets
+//= require data-confirm-modal
 //= require_tree .
+
+$(document).ready(function () {
+  $('.dropdown-toggle').dropdown();
+
+  $(".alert button.close").click(function (e) {
+    $(this).parent().fadeOut('slow');
+  });
+
+  dataConfirmModal.setDefaults({
+    title: 'Confirm your action',
+    commit: 'Continue',
+    cancel: 'Cancel'
+  });
+});
