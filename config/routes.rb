@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   devise_for :users
   root 'public/base#dashboard'
@@ -5,5 +7,6 @@ Rails.application.routes.draw do
   scope module: :user do
     # get 'dashboard' => 'base#dashboard', as: :dashboard
     resources 'companies'
+    mount Sidekiq::Web, at: '/sidekiq'
   end
 end
