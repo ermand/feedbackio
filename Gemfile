@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'rails_admin', '~> 0.7.0'
 gem 'cancancan'
+gem 'paper_trail', '~> 4.0'
 
 # ========= Frontend ==========
 gem 'jquery-rails'

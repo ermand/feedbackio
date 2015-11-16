@@ -27,7 +27,8 @@ class User::CompaniesController < User::BaseController
 
   def update
     if @company.update(company_params)
-      redirect_to @company, notice: "Company successfully updated."
+      undo_link = view_context.link_to("undo", revert_version_path(@company.versions.last), method: :post)
+      redirect_to @company, notice: "Company successfully updated. #{undo_link}"
     else
       render 'edit'
     end
