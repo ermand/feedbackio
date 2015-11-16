@@ -1,5 +1,4 @@
 class User::CompaniesController < User::BaseController
-  before_action :authenticate_user!
   before_action :find_company, only: [:show, :edit, :update, :destroy]
 
   def index

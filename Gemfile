@@ -14,8 +14,14 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# Use jquery as the JavaScript library
+gem 'rails_admin', '~> 0.7.0'
+gem 'cancancan'
+
+# ========= Frontend ==========
 gem 'jquery-rails'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
+gem 'font-awesome-rails'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -37,8 +43,6 @@ gem 'devise', '~> 3.5', '>= 3.5.2'
 gem 'sidekiq', '~> 3.5', '>= 3.5.3'
 gem 'devise-async', '~> 0.10.1'
 gem 'sinatra', :require => nil
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
-gem "font-awesome-rails"
 gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
 
 group :development, :test do

@@ -11,6 +11,11 @@
         <li>
           <%= link_to "Account", edit_user_registration_path %>
         </li>
+        <% if can?(:access, :rails_admin) %>
+          <li>
+            <%= link_to "Admin", rails_admin_path %>
+          </li>
+        <% end %>
         <li>
           <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
         </li>
