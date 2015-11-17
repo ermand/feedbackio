@@ -9,6 +9,15 @@ class User < ActiveRecord::Base
   validates :email, presence: true, length: { maximum: 255 }
   validates :encrypted_password, length: { minimum: 6 }, allow_blank: true
 
+  belongs_to :profile, touch: true
+  belongs_to :company
+
+  delegate :full_name, to: :profile
+
+  # def full_name
+  #   self.profile.full_name.upcase
+  # end
+
   private
     # Converts email to all lower-case
     def downcase_email

@@ -11,3 +11,10 @@
 3. Integrate Redis and cache to Redis
 4. Replace forms with simple_form __[Done]__
 5. Install state machine and update state through it
+
+# 17.11.2015
+1. Read http://guides.rubyonrails.org/association_basics.html
+2. Create sign-in using Google OAuth2
+3. Create custom sign-in form
+
+
