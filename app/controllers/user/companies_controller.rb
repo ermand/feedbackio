@@ -27,7 +27,7 @@ class User::CompaniesController < User::BaseController
 
   def update
     if @company.update(company_params)
-      undo_link = view_context.link_to("undo", revert_version_path(@company.versions.last), method: :post)
+      undo_link = view_context.link_to("undo", revert_version_path(@company.versions.last), method: :post, class: "btn btn-default")
       redirect_to @company, notice: "Company successfully updated. #{undo_link}"
     else
       render 'edit'
@@ -36,7 +36,8 @@ class User::CompaniesController < User::BaseController
 
   def destroy
     @company.destroy
-    redirect_to companies_path, notice: "Company was deleted."
+    undo_link = view_context.link_to("undo", revert_version_path(@company.versions.last), method: :post, class: "btn btn-default")
+    redirect_to companies_path, notice: "Company was deleted. #{undo_link}"
   end
 
   private
