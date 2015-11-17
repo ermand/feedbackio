@@ -51,6 +51,9 @@ gem 'devise-async', '~> 0.10.1'
 gem 'sinatra', :require => nil
 gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
 
+# ========= OAuth2 ==========
+gem 'omniauth-google-oauth2', '~> 0.2.10'
+
 # ========= State-Machine ==========
 gem 'state_machine'
 gem 'ruby-graphviz', :require => 'graphviz'
@@ -60,6 +63,7 @@ gem 'state_machines-activerecord'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'dotenv-rails', '~> 2.0', '>= 2.0.2'
 end
 
 group :development do
