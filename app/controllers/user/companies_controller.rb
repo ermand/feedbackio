@@ -13,7 +13,7 @@ class User::CompaniesController < User::BaseController
     @company = Company.new(company_params)
 
     if @company.save
-      redirect_to @company, notice: "Company successfully created."
+      redirect_to companies_path, notice: "Company successfully created. #{undo_link}"
     else
       render 'new'
     end
@@ -27,7 +27,6 @@ class User::CompaniesController < User::BaseController
 
   def update
     if @company.update(company_params)
-      undo_link = view_context.link_to("undo", revert_version_path(@company.versions.last), method: :post, class: "btn btn-default")
       redirect_to @company, notice: "Company successfully updated. #{undo_link}"
     else
       render 'edit'
@@ -36,7 +35,6 @@ class User::CompaniesController < User::BaseController
 
   def destroy
     @company.destroy
-    undo_link = view_context.link_to("undo", revert_version_path(@company.versions.last), method: :post, class: "btn btn-default")
     redirect_to companies_path, notice: "Company was deleted. #{undo_link}"
   end
 
@@ -47,5 +45,9 @@ class User::CompaniesController < User::BaseController
 
     def find_company
       @company = Company.find(params[:id])
+    end
+
+    def undo_link
+      undo_link = view_context.link_to("undo", revert_version_path(@company.versions.last), method: :post, class: "btn btn-default")
     end
 end
