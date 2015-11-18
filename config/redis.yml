@@ -1,0 +1,13 @@
+development:
+  url: redis://127.0.0.1:6379/8
+
+development_cache:
+  url: redis://127.0.0.1:6379/9
+  namespace: redis_namespace_development_cache_default
+
+production:
+  url: <%= ENV['REDIS_ENDPOINT'] %>
+
+production_cache:
+  url: <%= ENV['REDIS_ENDPOINT'] %>
+  namespace: redis_namespace_production_cache_default
