@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <span id="tasks-count"><%= current_user.tasks.size.to_s %></span> pending tasks
+    </h3>
+  </div>
+  <div class="panel-body" id="entryform">
+    <%= render 'users/tasks/form' %>
+  </div>
+</div>

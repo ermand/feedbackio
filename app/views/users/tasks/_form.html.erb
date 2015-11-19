@@ -1,0 +1,5 @@
+<%= simple_form_for @task, remote: true do |f| %>
+  <%= render "shared/errors", :entity => @task %>
+  <%= f.input :name, id: "task_name" %>
+  <%= f.button :submit %>
+<% end %>

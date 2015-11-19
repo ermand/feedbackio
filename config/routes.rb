@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   get 'google_api' => 'public/base#google_api'
 
   scope module: :users do
+    get "dashboard" => "base#dashboard", as: "dashboard"
     resources 'companies'
+    resources 'tasks'
     mount Sidekiq::Web, at: '/sidekiq'
   end
 end

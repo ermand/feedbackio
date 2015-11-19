@@ -74,5 +74,6 @@ group :development do
   gem 'spring'
 
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'quiet_assets'
 end
 

@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
   belongs_to :profile, touch: true
   belongs_to :company
+  has_many :tasks
 
   delegate :full_name, to: :profile
 

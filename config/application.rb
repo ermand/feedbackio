@@ -27,5 +27,7 @@ module Feedbackio
     # config.cache_store = :redis_store, 'redis://localhost:6379/0/cache', { expires_in: 90.minutes }
     redis_config = YAML.load(File.read(File.join('config','redis.yml')))
     config.cache_store = :redis_store, redis_config["#{Rails.env}_cache".to_s], { expires_in: 120.minutes,  namespace: redis_config["#{Rails.env}_cache".to_s]['namespace'] }
+
+    config.quiet_assets = false
   end
 end

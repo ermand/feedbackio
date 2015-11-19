@@ -1,0 +1,5 @@
+<% if entity.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(entity.errors.count, "error") %> prohibited from being saved:</h2>
+  </div>
+<% end %>

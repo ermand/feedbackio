@@ -1,4 +1,4 @@
-class Users::CompaniesController < User::BaseController
+class Users::CompaniesController < Users::BaseController
   before_action :find_company, only: [:show, :edit, :update, :destroy]
 
   def index

@@ -17,4 +17,9 @@
 2. Create sign-in using Google OAuth2
 3. Create custom sign-in form
 
+# 18.11.2015
+1. Please add validation for name __[Done]__
+2. Please display errors in simple form way with JS re-rending of form __[Done]__
+3. Please empty/rerender form upon success __[Done]__
+
 

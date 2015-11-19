@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117114903) do
+ActiveRecord::Schema.define(version: 20151118111812) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(version: 20151117114903) do
   end
 
   add_index "profiles", ["state"], name: "index_profiles_on_state"
+
+  create_table "tasks", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.text     "note"
+    t.string   "state"
+    t.datetime "occured_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
