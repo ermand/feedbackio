@@ -10,8 +10,16 @@ Rails.application.routes.draw do
 
   scope module: :users do
     get "dashboard" => "base#dashboard", as: "dashboard"
+    get "profile" => "profiles#show", as: "profile"
+    patch "profile" => "profiles#update", as: "update_profile"
     resources 'companies'
     resources 'tasks'
     mount Sidekiq::Web, at: '/sidekiq'
+  end
+
+  namespace :api, defaults: { format: :json } do
+    scope module: :v1 do
+      resources 'tasks'
+    end
   end
 end

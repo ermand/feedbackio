@@ -2,11 +2,10 @@ class Users::TasksController < Users::BaseController
   def create
     @task = Task.new(task_params)
     @task.user = current_user
-
+    if @task.save
+      @task = Task.new
+    end
     respond_to do |format|
-      if @task.save
-        @task = Task.new
-      end
       format.js
     end
   end

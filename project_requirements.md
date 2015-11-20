@@ -22,4 +22,10 @@
 2. Please display errors in simple form way with JS re-rending of form __[Done]__
 3. Please empty/rerender form upon success __[Done]__
 
+# 19.11.2015
+1. Make uploader work
+2. Integrate AWS
+3. Please make a form and upload a picture. Bonus - AJAX upload
+4. Read http://rspec.info/
+
 

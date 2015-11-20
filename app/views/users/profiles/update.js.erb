@@ -1,0 +1,2 @@
+// $("#entryform").html("<%= escape_javascript(render :partial => 'form') %>");
+$('#profile-photo').attr("src", '<%= current_user.profile.picture.thumbnail %>');

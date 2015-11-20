@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118111812) do
+ActiveRecord::Schema.define(version: 20151119115204) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20151118111812) do
     t.string   "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "picture"
   end
 
   add_index "profiles", ["state"], name: "index_profiles_on_state"

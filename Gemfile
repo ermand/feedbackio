@@ -60,6 +60,12 @@ gem 'ruby-graphviz', :require => 'graphviz'
 gem 'state_machines-audit_trail'
 gem 'state_machines-activerecord'
 
+# ========= File upload ==========
+gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave-aws', '~> 1.0'
+gem 'mini_magick', '~> 4.3', '>= 4.3.6'
+gem 'aws-sdk', '~> 2.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

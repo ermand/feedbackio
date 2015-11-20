@@ -1,6 +1,6 @@
 $("#entryform").html("<%= escape_javascript(render :partial => 'form') %>");
-<% if ! @task.errors.any? %>
-  $('#tasks-count').text('<%= current_user.tasks.count %>');
+$('#tasks-count').text('<%= current_user.tasks.count %>');
+
+<% unless @task.errors.any? %>
   $('#task_name').val('');
 <% end %>
-
