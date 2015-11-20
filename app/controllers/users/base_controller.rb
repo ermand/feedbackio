@@ -5,5 +5,4 @@ class Users::BaseController < ::ApplicationController
     @is_dashboard = true
     @task = Task.new
   end
-
 end

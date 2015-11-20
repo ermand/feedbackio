@@ -44,6 +44,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Extra gems
 gem 'devise', '~> 3.5', '>= 3.5.2'
 gem 'sidekiq', '~> 3.5', '>= 3.5.3'
+gem 'sidekiq-failures'
 gem 'redis-rails'
 gem 'redis-namespace'
 

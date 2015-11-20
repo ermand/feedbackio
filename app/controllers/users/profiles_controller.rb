@@ -13,8 +13,8 @@ class Users::ProfilesController < Users::BaseController
     if @profile.update(profile_params)
       current_user.profile = @profile
       current_user.save
+      AsyncModelMethodCallWorker.perform_async("User", 2, :touch)
       redirect_to @profile, notice: "Profile successfully updated."
-      # flash[:success] =
     else
       render 'show'
     end
