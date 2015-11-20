@@ -71,6 +71,13 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'dotenv-rails', '~> 2.0', '>= 2.0.2'
+  gem 'rubocop', '~> 0.34.2'
+  gem 'rspec-rails', '~> 3.3.2'
+  gem 'pry-rails', '~> 0.3.2'
+  gem 'simplecov', '~> 0.7.1', :require => false
+  gem 'parallel_tests', '~> 1.6.2'
+  gem 'factory_girl_rails', '~> 4.5'
+  gem 'ffaker', '~> 2.1.0'
 end
 
 group :development do
@@ -84,3 +91,20 @@ group :development do
   gem 'quiet_assets'
 end
 
+group :test do
+  # DB
+  gem 'database_cleaner', '~> 1.5.0'
+
+  # features
+  gem 'capybara', '~> 2.5'
+  gem 'capybara-webkit', '~> 1.7', '>= 1.7.1'
+  gem 'selenium-webdriver', '~> 2.48', '>= 2.48.1'
+
+  # mocks
+  gem 'webmock', '~> 1.21.0'
+  gem 'timecop', '~> 0.8.0'
+  gem 'mock_redis', '~> 0.15.0'
+
+  gem 'shoulda-matchers', '~> 3.0'
+  gem 'vcr', '~> 2.9.3'
+end

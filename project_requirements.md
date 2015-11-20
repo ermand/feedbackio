@@ -28,4 +28,10 @@
 3. Please make a form and upload a picture. Bonus - AJAX upload
 4. Read http://rspec.info/
 
+# 20.11.2015
+1. Read about factory girl, take a look to hassle examples
+2. Create tests for all your models
+3. Tests for 1-2 controllers
+4. Bonus: feature test Capybara
+
 
