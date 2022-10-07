@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'rails_admin', '~> 0.7.0'
+gem 'rails_admin', '~> 1.4.3'
 gem 'cancancan'
 gem 'paper_trail', '~> 4.0'
 gem 'simple_form', '~> 3.2'
